@@ -64,7 +64,7 @@ BoxDecoration(
           backgroundColor: Colors.white,
           elevation: 0,
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(120),
+            preferredSize: Size.fromHeight(72),
             child: Align(
               alignment: Alignment(0, -1),
               child: TabBar(
@@ -167,3 +167,41 @@ TabBar(
                 ),
               ])
  */
+
+//My Tab Bar Design
+/* 
+Container(
+                  height: 72,
+                  width: MediaQuery.of(context).size.width,
+                  margin: EdgeInsets.only(left: 24),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      //Delivery TAB
+                      Container(
+                        height: 36,
+                        width: 105,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            color: mcolor.green2),
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Delivery",
+                          style: selectedTab,
+                        ),
+                      ),
+                      //Pickup TAB
+                      Container(
+                        height: 36,
+                        width: 94,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            color: mcolor.grey),
+                        margin: EdgeInsets.only(left: 8),
+                        alignment: Alignment.center,
+                        child: Text("Pickup", style: unselectedTab),
+                      )
+                    ],
+                  ),
+                )
+*/
