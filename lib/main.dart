@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'helper.dart';
 
 void main() => runApp(MyApp());
@@ -29,22 +28,18 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: DefaultTabController(
-          length: 2,
-          child: Scaffold(
-            appBar: AppBar(
-              toolbarHeight: 198 - MediaQuery.of(context).padding.top,
-              backgroundColor: mcolor.white,
-              elevation: 0,
-              flexibleSpace: appBarBody(context),
-              bottom: homePageTabBar(),
-            ),
-            backgroundColor: mcolor.white,
-            body: TabBarView(
-              children: [deliveryPage(context), pickupPage(context)],
-            ),
-          ),
-        ));
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          toolbarHeight: 198 - MediaQuery.of(context).padding.top,
+          backgroundColor: mcolor.white,
+          elevation: 0,
+          flexibleSpace: appBarBody(context),
+          bottom: homePageTabBar(),
+        ),
+        backgroundColor: mcolor.white,
+        body: Container(child: deliveryPage(context)),
+      ),
+    );
   }
 }
